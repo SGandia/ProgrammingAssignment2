@@ -29,6 +29,7 @@ cacheSolve <- function(funcs, ...) {
         mat <- funcs$getInv()
         if (identical(inv_mat, mat, ignore.environment = TRUE))  {
                 # if no change, then return cache inverse
+                message("getting cached data")
                 output = mat
         }  else  {
                 # if changed, return calculated inverse and save to cache
